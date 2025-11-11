@@ -1,4 +1,4 @@
-/* Professional Resume Design */
+/* Professional Black & White Resume Design */
 * {
     margin: 0;
     padding: 0;
@@ -8,8 +8,8 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: #2c3e50;
+    background-color: #f5f5f5;
+    color: #000000;
     padding: 40px 20px;
     min-height: 100vh;
 }
@@ -19,34 +19,21 @@ body {
     margin: 0 auto;
     padding: 50px 60px;
     background-color: #ffffff;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Header Styles */
 header {
     text-align: center;
-    border-bottom: 3px solid #667eea;
+    border-bottom: 2px solid #000000;
     padding-bottom: 25px;
     margin-bottom: 40px;
-    position: relative;
-}
-
-header::after {
-    content: '';
-    position: absolute;
-    bottom: -3px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 3px;
-    background: #764ba2;
 }
 
 header h1 {
     font-size: 2.8em;
     font-weight: 700;
-    color: #1a202c;
+    color: #000000;
     margin-bottom: 15px;
     letter-spacing: 1px;
 }
@@ -58,19 +45,17 @@ header h1 {
 .contact p {
     margin: 8px 0;
     font-size: 1em;
-    color: #4a5568;
+    color: #000000;
     line-height: 1.8;
 }
 
 .contact a {
-    color: #667eea;
+    color: #0066cc;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
 }
 
 .contact a:hover {
-    color: #764ba2;
     text-decoration: underline;
 }
 
@@ -81,18 +66,16 @@ header h1 {
 .pdf-link a {
     display: inline-block;
     padding: 10px 25px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white !important;
-    border-radius: 25px;
+    background-color: #000000;
+    color: #ffffff !important;
+    border-radius: 4px;
     font-weight: 600;
     font-size: 0.95em;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-decoration: none !important;
 }
 
 .pdf-link a:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    background-color: #333333;
 }
 
 /* Section Styles */
@@ -102,34 +85,23 @@ section {
 
 section h2 {
     font-size: 1.8em;
-    color: #1a202c;
+    color: #000000;
     font-weight: 700;
     margin-bottom: 20px;
-    padding-left: 15px;
-    border-left: 5px solid #667eea;
-    position: relative;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #000000;
 }
 
 /* Entry Styles */
 .entry {
     margin-bottom: 25px;
-    padding: 20px;
-    background: #f7fafc;
-    border-radius: 6px;
-    border-left: 3px solid #e2e8f0;
-    transition: all 0.3s ease;
-}
-
-.entry:hover {
-    background: #edf2f7;
-    border-left-color: #667eea;
-    transform: translateX(5px);
+    padding: 15px 0;
 }
 
 .entry h3 {
     font-size: 1.25em;
     margin-bottom: 8px;
-    color: #2d3748;
+    color: #000000;
     font-weight: 600;
     line-height: 1.4;
 }
@@ -137,14 +109,14 @@ section h2 {
 .entry .date {
     font-size: 0.9em;
     font-style: italic;
-    color: #718096;
+    color: #555555;
     margin-bottom: 10px;
     display: block;
 }
 
 .entry p {
     margin: 8px 0;
-    color: #4a5568;
+    color: #000000;
     line-height: 1.7;
 }
 
@@ -156,12 +128,8 @@ ul {
 
 li {
     margin-bottom: 10px;
-    color: #4a5568;
+    color: #000000;
     line-height: 1.7;
-}
-
-li::marker {
-    color: #667eea;
 }
 
 /* Skills Section */
@@ -172,15 +140,17 @@ li::marker {
 
 .skills li {
     margin-bottom: 12px;
-    padding: 12px 15px;
-    background: white;
-    border-radius: 6px;
-    border-left: 3px solid #667eea;
+    padding: 12px 0;
     line-height: 1.7;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.skills li:last-child {
+    border-bottom: none;
 }
 
 .skills li strong {
-    color: #2d3748;
+    color: #000000;
     display: inline-block;
     min-width: 140px;
     font-weight: 600;
@@ -205,7 +175,7 @@ li::marker {
     }
 
     .entry {
-        padding: 15px;
+        padding: 10px 0;
     }
 }
 
@@ -223,9 +193,5 @@ li::marker {
 
     .pdf-link {
         display: none;
-    }
-
-    .entry:hover {
-        transform: none;
     }
 }
