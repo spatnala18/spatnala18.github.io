@@ -54,6 +54,21 @@
                     <li>Engineered a block-paged, sharded KV pipeline with t+1 prefetch on dual copy engines and NCCL overlap to localize KV reads and minimize cross-GPU hops; reduced p95 H2D memcpy time by 35%</li>
                 </ul>
             </div>
+            <div class="entry">
+                <h3>Inference Optimization Through Quantized FP4 Kernels</h3>
+                <p class="date">Aug 2025-Oct 2025</p>
+                <ul>
+                    <li>Built an FP4-native inference path for Qwen-2.5-14B on B200: pre-packed linear weights into NVFP4, replaced FP16 GEMMs with NVFP4 Tensor Core matmuls, and fused bias+activation; achieved p95 decode latency −18% vs FP8.</li>
+                    <li>Compressed the KV cache to FP4/NF4 (block-scaled) with in-read unpack during SDPA and FP16 softmax, cutting KV memory by 68%; this enabled to increase context from 16k to 32k and improved long-context throughput by 24%</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <h3>Fused Batched CUDA Sampler for LLM Decoding</h3>
+                <p class="date">Feb 2025-Apr 2025</p>
+                <ul>
+                    <li>Built a single persistent fused sampler CUDA kernel - implementing temperature, top-p/top-k, repetition penalty, EOS masking, and Philox RNG with warp-shuffle scans and segmented selection; improved decode throughput 1.3× on H100</li>
+                </ul>
+            </div>
         </section>
 
         <section>
@@ -73,6 +88,8 @@
                 <ul>
                     <li>Developed an NL2SQL system using RAG with DPR and FAISS vector search; Fine-tuned LLAMA 7B with QLORA-based PEFT to generate precise SQL queries, achieving 87% query accuracy by retrieving relevant database schemas and past queries</li>
                     <li>Built an in-house hyperparameter tuning system that focuses on diversity and label imbalance, saving an estimated $3 million by reducing dependency on costly external packages such as H2O</li>
+                    <li>Transitioned from XGBoost to GNN models using Pytorch-Geometric achieving a 15% improvement in terms of AUC-PR and reduced the inference time of the GNN model by 224x using Knowledge distillation methods like GLNN.</li>
+                    <li>Developed Fraud Detection Rules by training constrained Decision Trees on PySpark, generating a revenue of $2M</li>
                 </ul>
             </div>
             <div class="entry">
@@ -90,7 +107,9 @@
             <div class="entry">
                 <ul>
                     <li>Sanjay Patnala. "CALO-GNN: Calibrated-Uncertainty Graph Cost Models for Cross-Device TVM Meta-Schedule." KDD 2025 Workshop on Inference Optimization for GenAl</li>
+                    <li>Sanjay Patnala, Vedika Lakhanpal. "Auditable Surge Planning: Network-Aware Causal Inference Meets Prescriptive Optimization." KDD 2025 Workshop on Causal Machine Learning</li>
                     <li>Sanjay Patnala, Ushmita Pareek et. al. "GT2MLP: Attention aided distillation from Graph Transformer to MLP for Graph Structure-Independent Inference." CODS COMAD 2025 (Best Reviewed Paper)</li>
+                    <li>Sanjay Patnala, Sumedh et. al. "Structure Generation and Distillation using a Graph Free MLP." CODS COMAD 2024</li>
                     <li>Pranav Poduval, Sanjay Patnala et. al. "CASH via Optimal Diversity for Ensemble Learning." KDD 2024</li>
                     <li>Sumedh B.G, Sanjay Patnala et.al. "Local and Global structure aware Graph Transformer for Node classification". NeurIPS 2023 Workshop on Graph Learning Frontiers</li>
                 </ul>
