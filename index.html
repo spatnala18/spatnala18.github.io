@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjay Kumar Patnala - Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            [cite_start]<h1>SANJAY KUMAR PATNALA [cite: 1]</h1>
+            <div class="contact">
+                [cite_start]<p>33 11th St NE, Atlanta, GA 30309 [cite: 2] | [cite_start]+1470.408.8611 [cite: 2]</p>
+                <p>
+                    [cite_start]<a href="mailto:sanjaypatnala3@gmail.com">sanjaypatnala3@gmail.com [cite: 2]</a> | 
+                    [cite_start]<a href="https://www.linkedin.com/in/YOUR-LINKEDIN-URL">LinkedIn [cite: 2]</a> | 
+                    [cite_start]<a href="https://github.com/spatnala18">Github [cite: 2]</a>
+                </p>
+                <p class="pdf-link"><a href="resume_sanjaypatnala_llm_systems.pdf">[ Download PDF Version ]</a></p>
+            </div>
+        </header>
+
+        <section>
+            [cite_start]<h2>EDUCATION [cite: 3]</h2>
+            <div class="entry">
+                [cite_start]<h3>GEORGIA INSTITUTE OF TECHNOLOGY [cite: 4] [cite_start](Atlanta, USA [cite: 6])</h3>
+                [cite_start]<p class="date">Aug 2024 - May 2026 (Expected) [cite: 7]</p>
+                [cite_start]<p><strong>Master of Science in Computer Science (ML Specialization) [cite: 5]</strong>; [cite_start]GPA: 3.9/4.0 [cite: 5]</p>
+                [cite_start]<p><em>Coursework:</em> Machine Learning, Graph ML, Deep RL, ML Security, HW SW co-design- ML systems, GPU HW&SW, Systems ML [cite: 8]</p>
+            </div>
+            <div class="entry">
+                [cite_start]<h3>Indian Institute of Technology Bombay [cite: 9] [cite_start](Mumbai, India [cite: 11])</h3>
+                [cite_start]<p class="date">July 2017 - Aug 2021 [cite: 11]</p>
+                [cite_start]<p><strong>Bachelor of Technology in Mechanical Engineering [cite: 10]</strong>; [cite_start]GPA: 8.32/10.0 [cite: 10]</p>
+                [cite_start]<p><em>Coursework:</em> Data Mining, Deep Learning, Advanced Deep Learning, Deep Learning for NLP, Linear Algebra [cite: 12]</p>
+            </div>
+        </section>
+
+        <section>
+            [cite_start]<h2>PROJECTS [cite: 13]</h2>
+            <div class="entry">
+                [cite_start]<h3>KV-Drip for Tail-Latency Reduction in LLM Inference [cite: 14]</h3>
+                [cite_start]<p class="date">Aug 2025-current [cite: 15]</p>
+                <ul>
+                    [cite_start]<li>Implemented token-level hedged decoding on disaggregated P/D inference engine on vLLM, streaming partial KV-cache states between GPUs to rescue slow decodes in real time; [cite: 16] [cite_start]reduced p95 latency by 47% on 4×H100 long-context runs. [cite: 17]</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <h3>LLM Fine-Tuning and Distributed Inference Optimization | [cite_start]HW SW Co-Design for ML sys [cite: 18, 19]</h3>
+                [cite_start]<p class="date">Jan 2025-Apr 2025 [cite: 20]</p>
+                <ul>
+                    [cite_start]<li>Fine-tuned LLaMA-7B across $4\times H100$ (NVLink) using PyTorch DDP (NCCL) and a Triton Flash-Attn (QKT-softmax-V) SDPA backend; [cite: 21] [cite_start]tuned global batch/grad-accumulation via a simple roofline model resulting in +26% training throughput [cite: 22]</li>
+                    [cite_start]<li>Engineered a block-paged, sharded KV pipeline with t+1 prefetch on dual copy engines and NCCL overlap to localize KV reads and minimize cross-GPU hops; [cite: 23] [cite_start]reduced p95 H2D memcpy time by 35% [cite: 23]</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            [cite_start]<h2>WORK EXPERIENCE [cite: 24]</h2>
+            <div class="entry">
+                [cite_start]<h3>Amazon (Alexa AGI) [cite: 25] - [cite_start]Machine Learning Intern [cite: 26] [cite_start](Seattle, WA [cite: 29])</h3>
+                [cite_start]<p class="date">May 2025-Aug 2025 [cite: 29]</p>
+                <ul>
+                    [cite_start]<li>Implemented a conversational feature recommender RAG stack on AWS g6 (L4) with BGE-large embeddings and an LLaMA-8B selector on the same node, cutting retrieval latency by 25% vs Bedrock API calls. [cite: 30]</li>
+                    [cite_start]<li>Optimized Llama-3.3-70B on AWS p5 (H100) using TensorRT-LLM FP8, speculative decoding, paged and quantized KV-cache, and in-flight batching, delivering around 2.2x throughput; [cite: 31] [cite_start]TTFT of 800ms p95, TBT of 65ms p95 ( $16~tok/s)$ [cite: 32]</li>
+                    [cite_start]<li>Designed an attention-entropy aware KV policy to prefetch hot KV and quantize and defer cold blocks (nf4 on host, int8 on device), cutting KV transfer volume by 28% with no acc loss on QA/RAG evals [cite: 32]</li>
+                </ul>
+            </div>
+            <div class="entry">
+                [cite_start]<h3>Mastercard Al Garage [cite: 33] - [cite_start]Data Scientist [cite: 34] [cite_start](Gurugram, India [cite: 36])</h3>
+                [cite_start]<p class="date">Feb 2023-July 2024 [cite: 36]</p>
+                <ul>
+                    [cite_start]<li>Developed an NL2SQL system using RAG with DPR and FAISS vector search; [cite: 37] [cite_start]Fine-tuned LLAMA 7B with QLORA-based PEFT to generate precise SQL queries, achieving 87% query accuracy by retrieving relevant database schemas and past queries [cite: 38]</li>
+                    [cite_start]<li>Built an in-house hyperparameter tuning system that focuses on diversity and label imbalance, saving an estimated $3 million by reducing dependency on costly external packages such as H2O [cite: 38]</li>
+                </ul>
+            </div>
+            <div class="entry">
+                [cite_start]<h3>Ubisoft India Studios [cite: 39] - [cite_start]Programmer [cite: 40] [cite_start](Mumbai, India [cite: 41])</h3>
+                [cite_start]<p class="date">July 2021-Sept 2022 [cite: 41]</p>
+                <ul>
+                    [cite_start]<li>Parallelized the engine's Al loop in C++ (job system, lock-free queues), reducing main-thread stalls and frame-time variance [cite: 42]</li>
+                    [cite_start]<li>Profiled and tuned CUDA kernels with Nsight Compute, reducing warp divergence, occupancy limits and memory stalls [cite: 42]</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            [cite_start]<h2>PUBLICATIONS [cite: 43]</h2>
+            <div class="entry">
+                <ul>
+                    <li>Sanjay Patnala. "CALO-GNN: Calibrated-Uncertainty Graph Cost Models for Cross-Device TVM Meta-Schedule." [cite_start]KDD 2025 Workshop on Inference Optimization for GenAl [cite: 44]</li>
+                    <li>Sanjay Patnala, Ushmita Pareek et. al. [cite_start]"GT2MLP: Attention aided distillation from Graph Transformer to MLP for Graph Structure-Independent Inference." [cite: 45] [cite_start]CODS COMAD 2025 (Best Reviewed Paper) [cite: 46]</li>
+                    <li>Pranav Poduval, Sanjay Patnala et. al. "CASH via Optimal Diversity for Ensemble Learning." [cite_start]KDD 2024 [cite: 47]</li>
+                    <li>Sumedh B.G, Sanjay Patnala et.al. [cite_start]"Local and Global structure aware Graph Transformer for Node classification". [cite: 48] [cite_start]NeurIPS 2023 Workshop on Graph Learning Frontiers [cite: 49]</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            [cite_start]<h2>SKILLS [cite: 50]</h2>
+            <div class="entry">
+                <ul class="skills">
+                    [cite_start]<li><strong>Programming:</strong> Python, C++, CUDA, Triton, SQL, Pandas, NumPy, R, JavaScript, Apache Spark, D3, SQLite [cite: 51]</li>
+                    [cite_start]<li><strong>ML Tools:</strong> PyTorch, Tensorflow, ONNX, JAX, vLLM, SGLang, TensorRT, Scikit-Learn, Tableau, MapReduce, Kubernetes, Docker [cite: 52]</li>
+                    [cite_start]<li><strong>Software/Tools:</strong> MATLAB, Octave, AWS BedRock, AWS SageMaker, S3, DataBricks, Git, GCP, Excel [cite: 52]</li>
+                    [cite_start]<li><strong>Skilled Areas:</strong> Inference Optimization, ML systems, NLP, LLMS, RAG, PEFT, CASH, Statistics, A/B Testing, Forecasting, Graph ML [cite: 53]</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
